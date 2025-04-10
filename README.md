@@ -1,10 +1,27 @@
-# GAN-MODELS-COMPARISON
+# 🔍 Project Description: GAN-Models-Comparison
 
-# 🧠 GAN Comparison on MedMNIST (LSGAN vs WGAN vs WGAN-GP)
+This project presents a comprehensive comparison of three popular Generative Adversarial Network (GAN) architectures – LSGAN, WGAN, and WGAN-GP – using the MedMNIST (PathMNIST) dataset for medical image generation.
 
-This project implements and compares three popular Generative Adversarial Networks (GANs) — **LSGAN**, **WGAN**, and **WGAN-GP** — using the **PathMNIST** dataset from [MedMNIST](https://medmnist.com/). The goal is to **generate medical pathology images** and evaluate each model using **Inception Score (IS)**, **Fréchet Inception Distance (FID)**, and **TensorBoard visualizations**.
+The aim is to explore how different loss functions and training strategies affect the quality, stability, and realism of generated images.
 
----
+We train and evaluate each model under the same settings and visualize results through TensorBoard, while also reporting quantitative metrics including:
+
+Inception Score (IS)
+
+Fréchet Inception Distance (FID)
+
+The project provides clear insights into how different GAN variants perform on the same dataset, making it ideal for academic study, benchmarking, or practical GAN experimentation.
+
+✨ Features
+✅ Fully implemented LSGAN, WGAN, and WGAN-GP from scratch using PyTorch
+
+✅ TensorBoard integration for real-time image & metric comparison
+
+✅ Quantitative evaluation using IS and FID
+
+✅ Lightweight implementation optimized for MedMNIST dataset
+
+✅ Clean modular code structure with separate files for models, training, metrics, and visualizations
 
 ## 📦 Project Structure
 
@@ -74,56 +91,54 @@ GAN-ASSIGNMENT/
 [LSGAN] Inception Score: 1.2369 ± 0.0495
 [LSGAN] FID Score: 11.0367
 
-```
+
 [WGAN] Inception Score: 1.6616 ± 0.0388
 [WGAN] FID Score: 8.3756
-```
 
-```
+
+
 [WGAN-GP] Inception Score: 1.4208 ± 0.0381
 [WGAN-GP] FID Score: 0.1080
 
 ```
 
 
----
+
+
 
 ## 📈 TensorBoard Usage
-
+```
 Start visualization by running:
 
-```bash
+bash
 tensorboard --logdir=runs/
-```
+
+
 
 - Compare `runs/lsgan`, `runs/wgan`, and `runs/wgan_gp`
 - Visually inspect sample generations and losses
 
----
 
 ## 🧪 Metrics Used
 
 - **Inception Score (IS)**: Evaluates clarity and classifiability of images.
 - **Fréchet Inception Distance (FID)**: Measures similarity between real and generated distributions.
+```
 
----
+
 
 ## 🚀 How to Run
+```
+Make sure to install all dependencies from requirements.txt :
+pip install -r requirements.txt
 
-```bash
 # Run any model
 python lsgan.py
 python wgan.py
 python wgan_gp.py
+
 ```
 
-Make sure to install all dependencies from requirements.txt :
-
-```bash
-pip install -r requirements.txt
-```
-
----
 
 ## 📬 Acknowledgements
 
